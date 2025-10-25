@@ -1,0 +1,55 @@
+kafka:
+  # Kafka broker URL – where producers/consumers connect
+  broker_url: "localhost:9092"
+
+  # List of topics to be used in the project
+  topics:
+    - economy
+    - health
+    - politics
+    - science
+    - sport
+    - technology
+
+  # Number of partitions for each topic (adjust if needed)
+  partitions: 1
+
+  # Replication factor (1 for single broker setup)
+  replication_factor: 1
+
+firebase:
+  # Firebase project ID (matches .env FIREBASE_PROJECT_ID)
+  project_id: "cloudcomputing-23c4d"
+
+  # Default collection name to store news articles
+  collection_name: "news_articles"
+
+  # Optional: default document fields (structure)
+  default_fields:
+    - id
+    - title
+    - content
+    - category
+    - tags
+    - timestamp
+
+cloudinary:
+  # Cloudinary cloud name (matches .env CLOUDINARY_CLOUD_NAME)
+  cloud_name: "dyip4corg"
+
+  # Optional default image to show if no match found
+  default_image_url: "https://res.cloudinary.com/dyip4corg/image/upload/v000000/default.jpg"
+
+frontend:
+  # Refresh interval in seconds for checking new news notifications
+  refresh_interval: 5
+
+  # Max number of articles to show per page
+  max_articles_per_page: 10
+
+logging:
+  # Level of logs to show in Docker / infra services
+  level: "INFO"  # options: TRACE, DEBUG, INFO, WARN, ERROR
+
+  # Whether to show timestamps in logs
+  timestamps: true
