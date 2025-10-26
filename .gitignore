@@ -9,6 +9,7 @@ __pycache__/
 # infra
 /infra/firebase-service-account.json
 .env.local
+.env
 
 # Distribution / packaging
 .Python
